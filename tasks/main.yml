@@ -19,10 +19,10 @@
   with_items: "{{ svc_list }}"
   become: yes
 
-- name : "Whitelist httpd"
-  firewalld:
-    service: httpd
-    state: enabled
-    permanent: true
-    immediate: true
-  become: yes
+    #- name : "Whitelist httpd"
+    #  firewalld:
+    #    service: httpd
+    #    state: enabled
+    #    permanent: true
+    #    immediate: true
+    #  become: yes
