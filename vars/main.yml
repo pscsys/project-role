@@ -1,7 +1,7 @@
 ---
 pkg_list:
   - httpd
-  - htop
+  - php
 svc_list:
   - httpd
   - firewalld
