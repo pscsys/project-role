@@ -3,6 +3,7 @@
   yum:
     name: "{{ pkg_list }}"
     state: present
+    become: yes
 
 - name: "Ensure index.html is present"
   template:
