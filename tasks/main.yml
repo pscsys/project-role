@@ -1,2 +1,24 @@
 ---
-# tasks file for project-role
+- name: "Ensure packages are present"
+  yum:
+    name: "{{ pkg_list }}"
+    state: present
+
+- name: "Ensure index.html is present"
+  template:
+    src: index.html.j2
+    dest: /var/www/html/index.html
+
+      #- name: "Ensure httpd started and enabled"
+      #  service:
+      #    name: "{{ item }}"
+      #    state: started
+      #    enabled: true
+      #  with_items: "{{ svc_list }}"
+      #
+      #- name : "Whitelist httpd"
+      #  firewalld:
+      #    service: httpd
+      #    state: enabled
+      #    permanent: true
+      #    immediate: true
