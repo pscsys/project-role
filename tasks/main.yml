@@ -11,16 +11,18 @@
     dest: /var/www/html/index.html
   become: yes
 
-      #- name: "Ensure httpd started and enabled"
-      #  service:
-      #    name: "{{ item }}"
-      #    state: started
-      #    enabled: true
-      #  with_items: "{{ svc_list }}"
-      #
-      #- name : "Whitelist httpd"
-      #  firewalld:
-      #    service: httpd
-      #    state: enabled
-      #    permanent: true
-      #    immediate: true
+- name: "Ensure httpd started and enabled"
+  service:
+    name: "{{ item }}"
+    state: started
+    enabled: true
+  with_items: "{{ svc_list }}"
+  become: yes
+
+- name : "Whitelist httpd"
+  firewalld:
+    service: httpd
+    state: enabled
+    permanent: true
+    immediate: true
+  become: yes
