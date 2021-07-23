@@ -7,7 +7,7 @@ driver:
     name: virtualbox
 platforms:
   - name: new-project-server
-    box: ubuntu/bionic64
+    box: centos/7
 #    instance_raw_config_args:
 #      - "vm.network 'forwarded_port', guest: 80, host: 8088"
 provisioner:
