@@ -1,2 +1,7 @@
 ---
-# vars file for project-role
+pkg_list:
+  - httpd
+  - firewalld
+svc_list:
+  - httpd
+  - firewalld
